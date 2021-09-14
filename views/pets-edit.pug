@@ -25,6 +25,9 @@ block content
                     label Description
                     textarea.form-control(name="description")= pet.description
                 button(type="submit").btn.btn-primary Save
+                .form-group
+                    label Price*
+                    textarea.form-control(name="price" required type="number")
             .text-right
                 form(action=`/pets/${pet._id}?_method=DELETE`, method="POST")
                     button(type="submit").btn.btn-danger Remove
